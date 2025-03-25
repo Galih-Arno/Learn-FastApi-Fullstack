@@ -1,4 +1,4 @@
-# Learn Fullstack FastAPI
+# Learn Fullstack FastAPI :books:
 
 [FastAPI](https://fastapi.tiangolo.com) adalah kerangka kerja web yang modern, cepat (berkinerja tinggi) untuk membangun API dengan
 Python berdasarkan petunjuk tipe Python standar.
