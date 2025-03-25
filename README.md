@@ -15,7 +15,8 @@
 
 ## Typer - FastAPI CLI :globe_with_meridians:
 
-[Typer](https://typer.tiangolo.com) merupakan adik dari FastAPI yang dimaksudkan untuk menjadi FastAPI CLI. > Baca dokumentasi '[Typer]'(https://typer.tiangolo.com).
+[Typer](https://typer.tiangolo.com) merupakan adik dari FastAPI yang dimaksudkan untuk menjadi FastAPI CLI. 
+> Baca dokumentasi `[Typer](https://typer.tiangolo.com)`.
 
 ## Persyaratan :label:
 
@@ -31,13 +32,13 @@ Buat dan aktifkan [virtual environment](https://fastapi.tiangolo.com/virtual-env
     pip install "fastapi[standard]"
 ```
 
-> Catatan: Pastikan Anda memasukkan "fastapi[standard]" dalam tanda kutip untuk memastikannya berfungsi di semua terminal.
+> Catatan: Pastikan Anda memasukkan `"fastapi[standard]"` dalam tanda kutip untuk memastikannya berfungsi di semua terminal.
 
 ## Contoh 
 
 - Buat file 'main.py' :
 
-```
+```python
     from typing import Union
     from fastapi import FastAPI
 
@@ -77,3 +78,22 @@ Buat dan aktifkan [virtual environment](https://fastapi.tiangolo.com/virtual-env
 
 ```
 
+> Perintah `fastapi dev` untuk membaca file `main.py`, kemudian mendeteksi aplikasi FastAPI didalamnya, dan memulai server menggunakan Uvicorn. Secara default, `fastapi dev` akan dimulai dengan auto-reload yang diaktifkan untuk pengembangan lokal.
+
+- Periksa dan buka browser di `http://127.0.0.1:8000` atau localhost. Anda juga bisa menambahkan parameter pada browser `http://127.0.0.1:8000/items/1`.
+
+## Dokumentasi
+
+Anda dapat membaca dokumentasi resminya di [FastAPI](https://fastapi.tiangolo.com).
+
+### Referensi
+
+- [Typer](https://typer.tiangolo.com)
+- [Starlette](https://www.starlette.io)
+- [Pydantic](https://docs.pydantic.dev/latest)
+- [FUll-Stack FastAPI Template](https://fastapi.tiangolo.com/id/project-generation)
+
+## :phone: Kontak
+- Email: galihgratiaarno@gmail.com
+- Instagram: [@g9.arno](https://instagram.com/g9.arno)
+- LinkedIn: [Galih Gratia Arno](www.linkedin.com/in/galihgratiaarno)
