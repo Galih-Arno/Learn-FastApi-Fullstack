@@ -1,9 +1,8 @@
-# Learn Fullstack FastAPI :books:
+# Belajar Fullstack FastAPI :books:
 
-[FastAPI](https://fastapi.tiangolo.com) adalah kerangka kerja web yang modern, cepat (berkinerja tinggi) untuk membangun API dengan
-Python berdasarkan petunjuk tipe Python standar.
+[FastAPI](https://fastapi.tiangolo.com) adalah kerangka kerja web yang modern, cepat (berkinerja tinggi) untuk membangun API dengan Python berdasarkan petunjuk tipe Python standar.
 
-## Fitur utama:
+## :bulb: Fitur utama:
 
 - Fast: Kinerja tinggi setara dengan NodeJS dan Golang.
 - Fast to Code.
@@ -14,7 +13,67 @@ Python berdasarkan petunjuk tipe Python standar.
 - Robust: Dapatkan kode siap produksi dan dokumentasi interaktif otomatis.
 - Standard-based: Sangat kompatibel dengan OpenAPI dan Skema JSON.
 
-## Typer - FastAPI CLI
+## Typer - FastAPI CLI :globe_with_meridians:
 
-Typer merupakan adik dari FastAPI yang dimaksudkan untuk menjadi FastAPI CLI.
+[Typer](https://typer.tiangolo.com) merupakan adik dari FastAPI yang dimaksudkan untuk menjadi FastAPI CLI. > Baca dokumentasi '[Typer]'(https://typer.tiangolo.com).
+
+## Persyaratan :label:
+
+FastAPI berdiri pada:
+- [Starlette](https://www.starlette.io) untuk komponen web.
+- [Pydantic](https://docs.pydantic.dev/latest) untuk bagian data.
+
+## Instalasi :round_pushpin:
+
+Buat dan aktifkan [virtual environment](https://fastapi.tiangolo.com/virtual-environments) lalu instal FastAPI:
+
+```
+    pip install "fastapi[standard]"
+```
+
+> Catatan: Pastikan Anda memasukkan "fastapi[standard]" dalam tanda kutip untuk memastikannya berfungsi di semua terminal.
+
+## Contoh 
+
+- Buat file 'main.py' :
+
+```
+    from typing import Union
+    from fastapi import FastAPI
+
+    app = FastAPI()
+
+    @app.get("/")
+    def read_root():
+        return {"Hello": "World"}
+    
+    @app.get("/item/item{item_id}")
+    def read_item(item_id: int, q: Union[str, None] = None):
+        return {"item_id": item_id, "q": q}
+```
+
+- Jalankan server :
+
+```bash
+    $ fastapi dev main.py
+    ╭────────── FastAPI CLI - Development mode ───────────╮
+    │                                                     │
+    │  Serving at: http://127.0.0.1:8000                  │
+    │                                                     │
+    │  API docs: http://127.0.0.1:8000/docs               │
+    │                                                     │
+    │  Running in development mode, for production use:   │
+    │                                                     │
+    │  fastapi run                                        │
+    │                                                     │
+    ╰─────────────────────────────────────────────────────╯
+
+    INFO:     Will watch for changes in these directories: ['/home/user/code/awesomeapp']
+    INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+    INFO:     Started reloader process [2248755] using WatchFiles
+    INFO:     Started server process [2248757]
+    INFO:     Waiting for application startup.
+    INFO:     Application startup complete.
+
+```
 
